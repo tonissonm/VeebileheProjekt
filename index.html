@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="et">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veebilehe Projekt</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Veebilehe Projekt</h1>
+    </header>
+
+    <main>
+        <p>Tere! See on lihtne HTML5 mall, alusta siit.</p>
+    </main>
+
+    <footer>
+        <small>&copy; <span id="year"></span></small>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
