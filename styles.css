@@ -1,3 +1,15 @@
+body {
+    background-image: url("https://i.pinimg.com/736x/8a/79/ae/8a79ae60c65c025c65d1e9a70fdacd95.jpg");
+    background-repeat: repeat;
+}
+
+h1 {
+    color:#460000
+}
+
+.pilt1{
+    max-width: 10%;
+    height: auto;
 p{
     color:red;
     
