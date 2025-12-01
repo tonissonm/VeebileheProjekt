@@ -232,14 +232,7 @@ ul.carousel li img {
     padding: 20px;
 }
 
+
 iframe {
   border: none;
-}
-
-.projekti_videod {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    padding: 20px;
 }
