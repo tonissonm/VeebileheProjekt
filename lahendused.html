@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Redstone lahendused</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="lever.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
@@ -15,14 +16,40 @@
             </div>
         </div>
     </nav>
-    <header>
-        <h1>Redstone lahendused</h1>
-    </header>
+    
+    <section class="lahendused">
+        <header>
+            <h1>Redstone lahendused</h1>
+        </header>
+        <h2>Vajuta lüliti üles, et näha lahendust!</h2>
+        <div class ="moistatus">
+            <img id="lever" src="lever_off.png" alt="Lever"/>
 
-    <main>
-        <img class="redstone" src ="https://cdn.pixabay.com/photo/2017/03/19/04/19/minecraft-2155470_640.jpg" alt="Lahendused"/>
-    </main>
+            <div id="moistatus-content">
+                <h3>Kuidas saab käivitada Redstonei süsteemi ilma lülitita?</h3>
+                <img id="solution-img" src="torvik.png" alt="Redstonei sisend"/>
+                <p class="moistatus-tekst"> Redstone'i tõrvik annab püsiva signaali, isegi siis kui sisendit pole.</p>
+            </div>
+        </div>
+        <div class ="moistatus">
+            <img id="lever" src="lever_off.png" alt="Lever"/>
 
+            <div id="moistatus-content">
+                <h3>Kuidas töötavad Redstonei'ga AND väravad? </h3>
+                <img id="solution-img" src="andvarav.png" alt="And värav"/>
+                <p class="moistatus-tekst"> AND värav töötab ainult, siis kui mõlemad sisendid on töötamas. </p>
+            </div>
+        </div>
+        <div class ="moistatus">
+            <img id="lever" src="lever_off.png" alt="Lever"/>
+
+            <div id="moistatus-content">
+                <h3>Mis loob Redstoneil lühikese impulsisignaali? </h3>
+                <img id="solution-img" src="monostable.png" alt="And värav"/>
+                <p class="moistatus-tekst"> Impulssgeneraator (monostable circuit) muudab pika sisendi lühikeseks impulsiks. </p>
+            </div>
+        </div>
+    </section>
     <footer>
         <small>&copy; <span id="year"></span></small>
     </footer>
