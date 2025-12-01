@@ -35,6 +35,34 @@ body {
   color: #ff5555;
 }
 
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #aa0000;
+}
+
+/* Moving text */
+#marquee-text {
+    display: inline-block;
+    padding-left: 100%;              /* Algab ekraani väljast */
+    font-size: 1.1rem;
+    color: #ff5555;
+    animation: marquee 10s linear infinite;
+}
+
+/* Animatsioon ise */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 .main {
   display: flex;
@@ -129,7 +157,54 @@ ul.carousel li img {
   object-fit: cover;          
   border-radius: 10px;
 }
+.lahendused{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.moistatus {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
 
+.moistatus .lever {
+  width: 80px;
+  cursor: pointer;
+}
+
+.moistatus-content {
+  max-width: 400px;
+}
+#lever{
+    width:120px; 
+    cursor:pointer;
+}
+
+#solution-img {
+    max-width: 300px;
+    filter: blur(6px) grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.on #solution-img {
+    filter: blur(0) grayscale(0);
+}
+.moistatus-tekst{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.moistatus.on .solution-img {
+  filter: blur(0) grayscale(0);
+}
+
+.moistatus.on .moistatus-tekst {
+    opacity: 1;
+    max-height: 200px;
+}
 @media (max-width: 900px) {
   .main {
     flex-direction: column;
