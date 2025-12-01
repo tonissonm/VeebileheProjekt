@@ -1,6 +1,6 @@
 document.querySelectorAll('.moistatus').forEach(moistatus => {
     // Leiame leveri selles konkreetses moistatuses
-    const lever = moistatus.querySelector('#lever'); // või '.lever', kui muudad klassiks
+    const lever = moistatus.querySelector('.lever'); // või '#lever', kui võtta id järgi
 
     let leverOn = false;
 
