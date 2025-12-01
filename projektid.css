@@ -1,0 +1,146 @@
+/* General page styling */
+body {
+  background: #111;
+  color: #eee;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.4rem;
+}
+
+/* Lever layout */
+.lever-panel {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Lever block */
+.lever {
+  position: relative;
+  width: 70px;
+  height: 120px;
+  border-radius: 8px;
+  background: #333;
+  border: 2px solid #555;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  transition: border 0.15s, box-shadow 0.15s, transform 0.1s;
+}
+
+.lever:hover {
+  border-color: #bbb;
+  transform: translateY(-2px);
+}
+
+.lever.active {
+  border-color: #f44;
+  box-shadow: 0 0 18px rgba(255, 80, 80, 0.8);
+}
+
+/* Base block (stone-like) */
+.lever-base {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 40px;
+  background: #777;
+  border-radius: 4px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Lever handle */
+.lever-handle {
+  position: absolute;
+  bottom: 38px;
+  left: 50%;
+  transform-origin: bottom center;
+  width: 12px;
+  height: 55px;
+  background: linear-gradient(#bcbcbc, #888);
+  border-radius: 999px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  transition: transform 0.15s ease-out;
+}
+
+/* OFF position */
+.lever.off .lever-handle {
+  transform: translateX(-50%) rotate(-35deg);
+}
+
+/* ON position */
+.lever.on .lever-handle {
+  transform: translateX(-50%) rotate(35deg);
+}
+
+/* Small label above levers */
+.lever-label {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+/* Video player styling */
+.video-wrapper {
+  width: min(900px, 100%);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+  border: 2px solid #333;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-title {
+  font-size: 1rem;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Redstone power line */
+.redstone-line {
+  width: min(900px, 100%);
+  height: 6px;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #440000, #660000);
+  box-shadow: 0 0 10px rgba(200, 50, 50, 0.5);
+  opacity: 0.4;
+  transition: opacity 0.2s, box-shadow 0.2s;
+}
+
+/* Active wire (glowing) */
+.redstone-line.on {
+  opacity: 1;
+  box-shadow: 0 0 18px rgba(255, 40, 40, 0.9);
+  animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse {
+  0%   { filter: brightness(0.8); }
+  50%  { filter: brightness(1.4); }
+  100% { filter: brightness(0.8); }
+}
