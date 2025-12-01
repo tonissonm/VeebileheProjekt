@@ -17,7 +17,6 @@ body {
   align-items: center;
   border-bottom: 3px solid #aa0000;
   font-family: "Pixelify Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -89,8 +88,7 @@ body {
   image-rendering: pixelated;
 }
 
-.main-text h1 {
-  font-size: 2rem;
+header {
   color: #ff5555;
 }
 
